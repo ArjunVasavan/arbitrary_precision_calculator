@@ -28,6 +28,10 @@ int main(int argc, char** argv) {
             break;
         }
         case '-':{
+            
+            subtraction(head_1,tail_1,head_2,tail_2,&head_R,&tail_R);
+            printf("Result: \n");
+            print_list(head_R,tail_R);
             break;
         }
         case '*':{

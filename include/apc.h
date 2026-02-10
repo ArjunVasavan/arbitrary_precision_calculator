@@ -20,7 +20,9 @@ typedef enum {
 typedef enum {
     FIRST_GREATER_THAN_SECOND,
     SECOND_GREATER_THAN_FIRST,
-    EQUAL
+    EQUAL,
+    POSITIVE,
+    NEGATIVE
 }compare;
 
 status create_list(char* argv, Dlist** head, Dlist** tail);
@@ -32,5 +34,6 @@ status subtraction(Dlist* head_1, Dlist* tail_1,
                 Dlist* head_2, Dlist* tail_2,
                 Dlist** head_R, Dlist** tail_R);
 status insert_at_first( int data, Dlist** head, Dlist** tail);
-
+compare compare_bigint(Dlist* head_1, Dlist* head_2 );
+status starting_zero_remove(Dlist** head, Dlist** tail);
 #endif

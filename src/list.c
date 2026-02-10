@@ -92,3 +92,5 @@ compare compare_bigint(Dlist* head_1, Dlist* head_2 ) {
     }
     return EQUAL;
 }
+
+
