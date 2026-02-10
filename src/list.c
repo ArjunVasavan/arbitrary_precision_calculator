@@ -8,7 +8,6 @@ int ascii_to_int(char character ) {
  * if an function must change an pointer use pointer to pointer
  */
 status create_list(char* argv, Dlist** head, Dlist** tail) {
-    int initial_head_assign = 0;
 
     int i = 0;
     Dlist* temp = NULL;
@@ -18,6 +17,7 @@ status create_list(char* argv, Dlist** head, Dlist** tail) {
         Dlist* new_node = malloc(sizeof(Dlist));
         if ( new_node == NULL )
             return FAILURE; 
+
         new_node->data = ascii_to_int(argv[i]);
         new_node->next = NULL;
 
@@ -49,10 +49,11 @@ void print_list(Dlist* head,Dlist* tail) {
     Dlist* temp = head;
 
     while (temp!= NULL) {
+
         printf("%d",temp->data);
-        if (temp->next != NULL) {
+        if (temp->next != NULL)
             printf(" <-> ");
-        }
+
         temp = temp->next;
     }
 
