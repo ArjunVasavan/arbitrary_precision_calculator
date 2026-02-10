@@ -59,3 +59,36 @@ void print_list(Dlist* head,Dlist* tail) {
 
     printf(" <-> Tail\n");
 }
+
+compare compare_bigint(Dlist* head_1, Dlist* head_2 ) {
+    Dlist* temp_1 = head_1;
+    Dlist* temp_2 = head_2;
+
+    while (temp_1 && temp_2) {
+        temp_1 = temp_1->next;
+        temp_2 = temp_2->next;
+    }
+    if ( temp_1 == NULL && temp_2 == NULL ) {
+
+        temp_1 = head_1;
+        temp_2 = head_2;
+
+        while (temp_1 && temp_2) { // as both are same size
+
+            if ( temp_1->data > temp_2->data ) 
+                return FIRST_GREATER_THAN_SECOND;
+            if (temp_2->data > temp_1->data )
+                return SECOND_GREATER_THAN_FIRST;
+
+            temp_1 = temp_1->next;
+            temp_2 = temp_2->next;
+        }
+
+        return EQUAL;
+    } else if ( temp_1 != NULL && temp_2 == NULL ) {
+        return FIRST_GREATER_THAN_SECOND;
+    } else if ( temp_1 == NULL && temp_2 != NULL) {
+        return SECOND_GREATER_THAN_FIRST;
+    }
+    return EQUAL;
+}

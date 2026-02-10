@@ -17,10 +17,18 @@ typedef enum {
     FAILURE // 1
 }status;
 
+typedef enum {
+    FIRST_GREATER_THAN_SECOND,
+    SECOND_GREATER_THAN_FIRST,
+    EQUAL
+}compare;
 
 status create_list(char* argv, Dlist** head, Dlist** tail);
 void print_list(Dlist* head,Dlist* tail);
 status addition(Dlist* head_1, Dlist* tail_1,
+                Dlist* head_2, Dlist* tail_2,
+                Dlist** head_R, Dlist** tail_R);
+status subtraction(Dlist* head_1, Dlist* tail_1,
                 Dlist* head_2, Dlist* tail_2,
                 Dlist** head_R, Dlist** tail_R);
 status insert_at_first( int data, Dlist** head, Dlist** tail);
