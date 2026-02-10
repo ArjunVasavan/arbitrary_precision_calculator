@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
 
     switch (operator) {
         case '+':{
-            addition(&head_1,&tail_1,&head_2,&tail_2,&head_R,&tail_R);
+            addition(head_1,tail_1,head_2,tail_2,&head_R,&tail_R);
             printf("Result: \n");
             print_list(head_R,tail_R);
             break;
