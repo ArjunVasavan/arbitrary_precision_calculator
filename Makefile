@@ -1,4 +1,4 @@
 all:
 	@gcc -Iapc src/*.c
 clean:
-	@rm a.out
+	@command rm a.out
