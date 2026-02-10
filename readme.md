@@ -20,7 +20,7 @@ make clean
 ## Planned Usage
 
 ```bash
-./apc
+./a.out <operand_1> <operator> <operand_2>
 ```
 
 ## Author
