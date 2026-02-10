@@ -1,4 +1,5 @@
 #include "../include/apc.h"
+#include <stdio.h>
 int main(int argc, char** argv) {
     // argument should be ./a.out 100 + 200
     printf("Argument read is %s %s %s\n",argv[1],argv[2],argv[3]);
@@ -21,6 +22,9 @@ int main(int argc, char** argv) {
 
     switch (operator) {
         case '+':{
+            addition(&head_1,&tail_1,&head_2,&tail_2,&head_R,&tail_R);
+            printf("Result: \n");
+            print_list(head_R,tail_R);
             break;
         }
         case '-':{
