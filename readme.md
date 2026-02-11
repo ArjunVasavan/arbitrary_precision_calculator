@@ -10,6 +10,13 @@ An Arbitrary Precision Calculator implemented in C that performs arithmetic on i
 
 Numbers are represented internally using a **doubly linked list**, enabling digit-by-digit arithmetic similar to manual calculation.
 
+## Installation
+Clone the repository:
+```bash
+git clone https://github.com/ArjunVasavan/arbitrary_precision_calculator
+cd arbitrary_precision_calculator
+```
+
 ## Build
 
 ```bash
