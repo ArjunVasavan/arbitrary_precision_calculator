@@ -30,6 +30,9 @@ void print_list(Dlist* head,Dlist* tail);
 status addition(Dlist* head_1, Dlist* tail_1,
                 Dlist* head_2, Dlist* tail_2,
                 Dlist** head_R, Dlist** tail_R);
+status division(Dlist* head_1, Dlist* tail_1,
+                Dlist* head_2, Dlist* tail_2,
+                Dlist** head_R, Dlist** tail_R);
 status subtraction(Dlist* head_1, Dlist* tail_1,
                    Dlist* head_2, Dlist* tail_2,
                    Dlist** head_R, Dlist** tail_R);
