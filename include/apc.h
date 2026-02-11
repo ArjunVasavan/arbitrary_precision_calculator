@@ -31,9 +31,13 @@ status addition(Dlist* head_1, Dlist* tail_1,
                 Dlist* head_2, Dlist* tail_2,
                 Dlist** head_R, Dlist** tail_R);
 status subtraction(Dlist* head_1, Dlist* tail_1,
-                Dlist* head_2, Dlist* tail_2,
-                Dlist** head_R, Dlist** tail_R);
+                   Dlist* head_2, Dlist* tail_2,
+                   Dlist** head_R, Dlist** tail_R);
+status multiplication(Dlist* head_1, Dlist* tail_1,
+                      Dlist* head_2, Dlist* tail_2,
+                      Dlist** head_R, Dlist** tail_R);
 status insert_at_first( int data, Dlist** head, Dlist** tail);
 compare compare_bigint(Dlist* head_1, Dlist* head_2 );
 status starting_zero_remove(Dlist** head, Dlist** tail);
+status insert_at_last(int data, Dlist **head, Dlist **tail);
 #endif

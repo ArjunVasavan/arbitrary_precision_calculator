@@ -1,5 +1,4 @@
 #include "../include/apc.h"
-#include <time.h>
 
  /* NOTE: single* is used because im not modifying these pointers
  */

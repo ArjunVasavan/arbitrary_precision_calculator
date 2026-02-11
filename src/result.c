@@ -25,6 +25,30 @@ status insert_at_first( int data, Dlist** head, Dlist** tail) {
 
 }
 
+status insert_at_last(int data, Dlist **head, Dlist **tail) {
+
+    Dlist* new_node = malloc(sizeof(Dlist));
+
+    if ( new_node == NULL ) {
+        return FAILURE;
+    }
+    new_node->data = data;
+    new_node->prev = NULL;
+    new_node->next = NULL;
+
+
+    if ( *head == NULL && *tail == NULL ) {
+        *head = new_node;
+        *tail = new_node;
+        return SUCCESS;
+    }
+
+    new_node->prev = *tail;
+    new_node->prev->next = new_node;
+    *tail = new_node;
+    return SUCCESS;
+}
+
 status starting_zero_remove(Dlist** head, Dlist** tail) {
 
     if (*head == NULL) return FAILURE;
