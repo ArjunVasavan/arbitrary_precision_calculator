@@ -25,6 +25,7 @@ int main(int argc, char** argv) {
             addition(head_1,tail_1,head_2,tail_2,&head_R,&tail_R);
             printf("Result: \n");
             print_list(head_R,tail_R);
+            output_print(head_R,tail_R);
             break;
         }
         case '-':{
@@ -32,12 +33,14 @@ int main(int argc, char** argv) {
             subtraction(head_1,tail_1,head_2,tail_2,&head_R,&tail_R);
             printf("Result: \n");
             print_list(head_R,tail_R);
+            output_print(head_R,tail_R);
             break;
         }
         case 'x':{
             multiplication(head_1,tail_1,head_2,tail_2,&head_R,&tail_R);
             printf("Result: \n");
             print_list(head_R,tail_R);
+            output_print(head_R,tail_R);
             break;
         }
         case '/':{

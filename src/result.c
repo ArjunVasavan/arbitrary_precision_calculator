@@ -1,4 +1,5 @@
 #include "../include/apc.h"
+#include <stdio.h>
 
 status insert_at_first( int data, Dlist** head, Dlist** tail) {
 
@@ -23,6 +24,20 @@ status insert_at_first( int data, Dlist** head, Dlist** tail) {
     *head = new_node;
     return SUCCESS;
 
+}
+
+void output_print(Dlist* head, Dlist* tail) {
+    printf("\n");
+    extern compare result_sign_flag;
+    if ( result_sign_flag == NEGATIVE ) {
+        printf("-");
+    }
+    Dlist* temp = head;
+    while (temp) {
+        printf("%d",temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
 }
 
 status insert_at_last(int data, Dlist **head, Dlist **tail) {
