@@ -11,6 +11,7 @@ status subtraction(Dlist* head_1, Dlist* tail_1,
                    Dlist** head_R, Dlist** tail_R) {
 
     compare cmp = compare_bigint(head_1,head_2);
+    // cmp will compare if equal , greater or lesser
     *head_R = NULL;
     *tail_R = NULL;
 
