@@ -1,5 +1,4 @@
 #include "../include/apc.h"
-#include <stdio.h>
 
 // divison using contionous substraction
 status division(Dlist* head_1, Dlist* tail_1,

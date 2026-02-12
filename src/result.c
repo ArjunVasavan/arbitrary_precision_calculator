@@ -41,7 +41,7 @@ operation which_operation(char *operand_1,
     if (operand_2[0] == '-')
         sign2 = NEGATIVE;
 
-    if (operation == '*' || operation == '/') {
+    if (operation == 'x' || operation == '/') {
         if (sign1 == sign2)
             *result_sign_flag = POSITIVE; 
 

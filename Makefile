@@ -1,4 +1,10 @@
+.PHONY: all test clean
+
 all:
-	@gcc -Iapc src/*.c
+	@gcc -Iinclude src/*.c -o a.out
+
+test:
+	@cd test && ./test.sh
+
 clean:
-	@command rm a.out
+	@rm -f a.out
