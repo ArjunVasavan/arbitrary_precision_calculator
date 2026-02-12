@@ -3,12 +3,12 @@
 /* NOTE: single* is used because im not modifying these pointers
  */
 
-compare result_sign_flag; // in subtraction theres negative 
-// so when printing negative created an global to make remember
 
 status subtraction(Dlist* head_1, Dlist* tail_1,
                    Dlist* head_2, Dlist* tail_2,
                    Dlist** head_R, Dlist** tail_R) {
+
+    extern compare result_sign_flag;
 
     compare cmp = compare_bigint(head_1,head_2);
     // cmp will compare if equal , greater or lesser

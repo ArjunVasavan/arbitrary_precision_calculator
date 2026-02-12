@@ -20,10 +20,19 @@ typedef enum {
 typedef enum {
     FIRST_GREATER_THAN_SECOND,
     SECOND_GREATER_THAN_FIRST,
-    EQUAL,
+    EQUAL
+}compare;
+
+typedef enum {
     POSITIVE,
     NEGATIVE
-}compare;
+}sign;
+
+typedef enum{
+    ADDITION,
+    SUBTRACTION,
+    REGULAR
+} operation;
 
 status create_list(char* argv, Dlist** head, Dlist** tail);
 void print_list(Dlist* head,Dlist* tail);
@@ -39,6 +48,12 @@ status subtraction(Dlist* head_1, Dlist* tail_1,
 status multiplication(Dlist* head_1, Dlist* tail_1,
                       Dlist* head_2, Dlist* tail_2,
                       Dlist** head_R, Dlist** tail_R);
+operation which_operation(char *operand_1,
+                          char operation,
+                          char *operand_2,
+                          sign *result_sign_flag,
+                          Dlist *head_1,
+                          Dlist *head_2);
 status insert_at_first( int data, Dlist** head, Dlist** tail);
 compare compare_bigint(Dlist* head_1, Dlist* head_2 );
 status starting_zero_remove(Dlist** head, Dlist** tail);

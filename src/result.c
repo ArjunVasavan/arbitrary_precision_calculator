@@ -26,9 +26,78 @@ status insert_at_first( int data, Dlist** head, Dlist** tail) {
 
 }
 
+operation which_operation(char *operand_1,
+                          char operation,
+                          char *operand_2,
+                          sign *result_sign_flag,
+                          Dlist *head_1,
+                          Dlist *head_2) {
+    sign sign1 = POSITIVE;
+    sign sign2 = POSITIVE;
+
+    if (operand_1[0] == '-')
+        sign1 = NEGATIVE;
+
+    if (operand_2[0] == '-')
+        sign2 = NEGATIVE;
+
+    if (operation == '*' || operation == '/') {
+        if (sign1 == sign2)
+            *result_sign_flag = POSITIVE; 
+
+        else
+            *result_sign_flag = NEGATIVE;
+
+        return REGULAR;
+    }
+
+    if (operation == '+') {
+
+        if (sign1 == sign2) {
+            *result_sign_flag = sign1;
+
+            return ADDITION;
+        }
+        else {
+
+            compare cmp = compare_bigint(head_1, head_2);
+
+            if (cmp == FIRST_GREATER_THAN_SECOND)
+                *result_sign_flag = sign1;
+            else if (cmp == SECOND_GREATER_THAN_FIRST)
+                *result_sign_flag = sign2;
+            else
+                *result_sign_flag = POSITIVE;
+
+            return SUBTRACTION;
+        }
+    }
+
+
+    if (operation == '-') {
+        if (sign1 != sign2) {
+            *result_sign_flag = sign1;
+            return ADDITION;
+        } else {
+            compare cmp = compare_bigint(head_1, head_2);
+
+            if (cmp == FIRST_GREATER_THAN_SECOND)
+                *result_sign_flag = sign1;
+            else if (cmp == SECOND_GREATER_THAN_FIRST)
+                *result_sign_flag = (sign1 == POSITIVE) ? NEGATIVE : POSITIVE;
+            else
+                *result_sign_flag = POSITIVE;
+
+            return SUBTRACTION;
+        }
+    }
+
+    return REGULAR;
+}
+
 void output_print(Dlist* head, Dlist* tail) {
     printf("\n");
-    extern compare result_sign_flag;
+    extern sign result_sign_flag;
     if ( result_sign_flag == NEGATIVE ) {
         printf("-");
     }
