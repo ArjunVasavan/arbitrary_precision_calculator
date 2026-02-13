@@ -4,6 +4,13 @@ sign result_sign_flag;
 
 int main(int argc, char** argv) {
 
+    if ( argc != 4 ) {
+        printf("Error!\n");
+        printf("Use case : ./a.out <operand_1> <operator> <operand_2> \n");
+        printf("Note : for multiplication use 'x' ");
+        exit(EXIT_FAILURE);
+    }
+
     Dlist* head_1 = NULL;
     Dlist* tail_1 = NULL;
     Dlist* head_2 = NULL;
@@ -52,7 +59,9 @@ int main(int argc, char** argv) {
             break;
         }
         default:{
-            printf("Error Enter valid operation\n");
+            printf("Error!\n");
+            printf("Use case : ./a.out <operand_1> <operator> <operand_2> \n");
+            printf("Note : for multiplication use 'x' ");
             exit(EXIT_FAILURE);
         }
     }
