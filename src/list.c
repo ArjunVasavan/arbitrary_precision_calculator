@@ -71,4 +71,51 @@ compare compare_bigint(Dlist* head_1, Dlist* head_2 ) {
     return EQUAL;
 }
 
+status insert_at_last(int data, Dlist **head, Dlist **tail) {
 
+    Dlist* new_node = malloc(sizeof(Dlist));
+
+    if ( new_node == NULL ) {
+        return FAILURE;
+    }
+    new_node->data = data;
+    new_node->prev = NULL;
+    new_node->next = NULL;
+
+
+    if ( *head == NULL && *tail == NULL ) {
+        *head = new_node;
+        *tail = new_node;
+        return SUCCESS;
+    }
+
+    new_node->prev = *tail;
+    new_node->prev->next = new_node;
+    *tail = new_node;
+    return SUCCESS;
+}
+
+status insert_at_first( int data, Dlist** head, Dlist** tail) {
+
+    Dlist* new_node = malloc(sizeof(Dlist));
+
+    if ( new_node == NULL ) {
+        return FAILURE;
+    }
+
+    new_node->data = data;
+    new_node->next = NULL;
+    new_node->prev = NULL;
+
+    if ( *head == NULL && *tail == NULL ) {
+        *head = new_node;
+        *tail = new_node;
+        return SUCCESS;
+    }
+
+    new_node->next = *head;
+    new_node->next->prev = new_node;
+    *head = new_node;
+    return SUCCESS;
+
+}
