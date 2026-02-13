@@ -51,5 +51,6 @@ status division(Dlist* head_1, Dlist* tail_1,
         div_count /= 10;
     }
 
+    starting_zero_remove(head_R,tail_R);
     return SUCCESS;
 }

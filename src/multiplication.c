@@ -50,6 +50,7 @@ status multiplication(Dlist* head_1, Dlist* tail_1,
         shift_count+=1;
     }
 
+    starting_zero_remove(head_R,tail_R);
 
     return SUCCESS;
 }

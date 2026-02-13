@@ -34,5 +34,7 @@ status addition(Dlist* head_1, Dlist* tail_1,
     if ( carry ) {
         insert_at_first(carry,head_R,tail_R);
     }
+
+    starting_zero_remove(head_R,tail_R);
     return SUCCESS;
 }
