@@ -7,7 +7,7 @@ status division(Dlist* head_1, Dlist* tail_1,
 
     if ( head_2->data == 0 && head_2->next == NULL ) {
         printf("\033[31m✗ Error: Operation failed! [Division by zero]\033[0m\n");
-        return FAILURE;
+        exit(EXIT_FAILURE);;
     }
 
     compare cmp = compare_bigint(head_1,head_2);
