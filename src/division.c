@@ -25,15 +25,13 @@ status division(Dlist* head_1, Dlist* tail_1,
         small_head = head_2;
         small_tail = tail_2;
     } else if ( cmp == SECOND_GREATER_THAN_FIRST ) {
- // in this case dividend is smaller than divisor, result is zero
+        // in this case dividend is smaller than divisor, result is zero
         insert_at_first(0,head_R,tail_R);
         return SUCCESS;
     } else if (cmp == EQUAL) {
         insert_at_first(1,head_R,tail_R);
-        printf("Now the div_count is %d\n",1);
         return SUCCESS;
     }
-
 
     while (compare_bigint(big_head,small_head) != SECOND_GREATER_THAN_FIRST ) {
         subtraction(big_head,big_tail,small_head,small_tail,&temp_HR,&temp_TR);
@@ -46,8 +44,6 @@ status division(Dlist* head_1, Dlist* tail_1,
             break;
         }
     }
-
-    printf("Now the div_count is %d\n",div_count);
 
     while (div_count != 0) {
         int rem = div_count % 10;

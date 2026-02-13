@@ -1,5 +1,4 @@
 #include "../include/apc.h"
-#include <stdio.h>
 
 status insert_at_first( int data, Dlist** head, Dlist** tail) {
 
@@ -41,22 +40,12 @@ operation which_operation(char *operand_1,
     if (operand_2[0] == '-')
         sign2 = NEGATIVE;
 
-    if ( sign2 == NEGATIVE ) {
-        printf("Sign 2 is NEGATIVE\n");
-    }
-
-    printf("Operation is %c\n",operation);
-
     if (operation == 'x' || operation == '/') {
-        if (sign1 == sign2){
+        if (sign1 == sign2)
             *result_sign_flag = POSITIVE; 
-            printf("result_sign_flag: POSITIVE\n");
-        }
 
-        else{
+        else
             *result_sign_flag = NEGATIVE;
-            printf("result_sign_flag: NEGATIVE\n");
-        }
 
         return REGULAR;
     }
@@ -66,10 +55,8 @@ operation which_operation(char *operand_1,
 
         if (sign1 == sign2) {
             *result_sign_flag = sign1;
-
             return ADDITION;
-        }
-        else {
+        } else {
 
             compare cmp = compare_bigint(head_1, head_2);
 
@@ -104,20 +91,6 @@ operation which_operation(char *operand_1,
     }
 
     return REGULAR;
-}
-
-void output_print(Dlist* head, Dlist* tail) {
-    printf("\n");
-    extern sign result_sign_flag;
-    if ( result_sign_flag == NEGATIVE ) {
-        printf("-");
-    }
-    Dlist* temp = head;
-    while (temp) {
-        printf("%d",temp->data);
-        temp = temp->next;
-    }
-    printf("\n");
 }
 
 status insert_at_last(int data, Dlist **head, Dlist **tail) {
@@ -161,4 +134,18 @@ status starting_zero_remove(Dlist** head, Dlist** tail) {
     }
 
     return SUCCESS;
+}
+
+void output_print(Dlist* head, Dlist* tail) {
+    printf("\n");
+    extern sign result_sign_flag;
+    if ( result_sign_flag == NEGATIVE ) {
+        printf("-");
+    }
+    Dlist* temp = head;
+    while (temp) {
+        printf("%d",temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
 }

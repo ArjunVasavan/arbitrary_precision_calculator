@@ -37,28 +37,6 @@ status create_list(char* argv, Dlist** head, Dlist** tail) {
     return SUCCESS;
 }
 
-void print_list(Dlist* head,Dlist* tail) {
-
-    if ( head == NULL ) {
-        printf("List is empty\n");
-        return;
-    }
-
-    printf("HEAD <-> ");
-
-    Dlist* temp = head;
-
-    while (temp!= NULL) {
-
-        printf("%d",temp->data);
-        if (temp->next != NULL)
-            printf(" <-> ");
-
-        temp = temp->next;
-    }
-
-    printf(" <-> Tail\n");
-}
 
 compare compare_bigint(Dlist* head_1, Dlist* head_2 ) {
     Dlist* temp_1 = head_1;

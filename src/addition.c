@@ -1,7 +1,6 @@
 #include "../include/apc.h"
 
- /* NOTE: single* is used because im not modifying these pointers
- */
+// NOTE: single* is used because im not modifying these pointers
 status addition(Dlist* head_1, Dlist* tail_1,
                 Dlist* head_2, Dlist* tail_2,
                 Dlist** head_R, Dlist** tail_R) {

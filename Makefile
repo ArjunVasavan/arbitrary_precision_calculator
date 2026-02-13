@@ -1,10 +1,11 @@
 .PHONY: all test clean
 
 all:
-	@gcc -Iinclude src/*.c -o a.out
+	@gcc -Iinclude src/*.c tests/printing.c -o a.out
 
 test:
-	@cd test && ./test.sh
+	@gcc -Iinclude src/*.c tests/printing.c -o a.out
+	@cd tests && ./test.sh
 
 clean:
 	@rm -f a.out
