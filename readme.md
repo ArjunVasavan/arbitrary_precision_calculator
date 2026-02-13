@@ -34,7 +34,7 @@ make clean        # Clean build artifacts
 
 ## Usage
 ```bash
-./a.out <operand_1> <operator> <operand_2>
+./a.out <first_operand> <operator> <second_operand>
 ```
 
 **Examples:**
