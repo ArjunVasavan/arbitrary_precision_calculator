@@ -8,7 +8,6 @@ status subtraction(Dlist* head_1, Dlist* tail_1,
                    Dlist* head_2, Dlist* tail_2,
                    Dlist** head_R, Dlist** tail_R) {
 
-    extern compare result_sign_flag;
 
     compare cmp = compare_bigint(head_1,head_2);
     // cmp will compare if equal , greater or lesser
@@ -32,13 +31,11 @@ status subtraction(Dlist* head_1, Dlist* tail_1,
         // here result is positive
         t_big = tail_1;
         t_small = tail_2;
-        result_sign_flag = POSITIVE;
 
     } else if ( cmp == SECOND_GREATER_THAN_FIRST ) {
         // here result is negative
         t_big = tail_2;
         t_small = tail_1;
-        result_sign_flag = NEGATIVE;
     }
 
     while (t_big) {

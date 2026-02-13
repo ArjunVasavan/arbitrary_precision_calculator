@@ -66,6 +66,11 @@ int main(int argc, char** argv) {
             printf("Result: \n");
             print_list(head_R,tail_R);
             output_print(head_R,tail_R);
+            if ( result_sign_flag == NEGATIVE ) {
+                printf("Result sign flag is Negative\n");
+            } else {
+                printf("Result sign flag is Positive\n");
+            }
             break;
         }
         default:{

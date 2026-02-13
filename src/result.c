@@ -41,15 +41,26 @@ operation which_operation(char *operand_1,
     if (operand_2[0] == '-')
         sign2 = NEGATIVE;
 
-    if (operation == 'x' || operation == '/') {
-        if (sign1 == sign2)
-            *result_sign_flag = POSITIVE; 
+    if ( sign2 == NEGATIVE ) {
+        printf("Sign 2 is NEGATIVE\n");
+    }
 
-        else
+    printf("Operation is %c\n",operation);
+
+    if (operation == 'x' || operation == '/') {
+        if (sign1 == sign2){
+            *result_sign_flag = POSITIVE; 
+            printf("result_sign_flag: POSITIVE\n");
+        }
+
+        else{
             *result_sign_flag = NEGATIVE;
+            printf("result_sign_flag: NEGATIVE\n");
+        }
 
         return REGULAR;
     }
+
 
     if (operation == '+') {
 
