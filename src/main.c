@@ -11,6 +11,8 @@ int main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 
+    check_if_its_integer(argv[1],argv[3]);
+
     Dlist* head_1 = NULL;
     Dlist* tail_1 = NULL;
     Dlist* head_2 = NULL;
