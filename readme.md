@@ -1,6 +1,7 @@
 # Arbitrary Precision Calculator (APC)
-![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
-![Status](https://img.shields.io/badge/status-completed-brightgreen?style=flat-square)
+![C](https://img.shields.io/badge/-00599C?style=flat-square&logo=c&logoColor=white)
+![Status](https://img.shields.io/badge/status-completed-green?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
 ## Overview
 An Arbitrary Precision Calculator implemented in C that performs arithmetic on integers of unlimited length, bypassing built-in data type limits.
