@@ -29,6 +29,9 @@ int main(int argc, char** argv) {
     create_list(num1,&head_1,&tail_1);
     create_list(num2,&head_2,&tail_2);
 
+    starting_zero_remove(&head_1,&tail_1);
+    starting_zero_remove(&head_2,&tail_2);
+
     operation op = which_operation(argv[1],argv[2][0],argv[3],&result_sign_flag,head_1,head_2);
 
     switch (operator) {
