@@ -1,54 +1,81 @@
 # Arbitrary Precision Calculator (APC)
-![C](https://img.shields.io/badge/-00599C?style=flat-square&logo=c&logoColor=white)
-![Status](https://img.shields.io/badge/status-completed-green?style=flat-square)
+
+![C](https://img.shields.io/badge/language-C-blue?style=flat-square)
+![Status](https://img.shields.io/badge/status-completed-brightgreen?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
+---
+
 ## Overview
-An Arbitrary Precision Calculator implemented in C that performs arithmetic on integers of unlimited length, bypassing built-in data type limits.
-Numbers are represented internally using a **doubly linked list**, enabling digit-by-digit arithmetic similar to manual calculation.
+
+An **Arbitrary Precision Calculator implemented in C** that performs arithmetic on integers of unlimited length, bypassing built-in data type limits.
+
+Numbers are internally represented using a **doubly linked list**, enabling digit-by-digit arithmetic similar to manual calculation.
+
+---
 
 ## Project Structure
+
 ```
 .
 ├── include/
-│   └── apc.h              # Header file
+│   └── apc.h
 ├── src/
-│   ├── addition.c         # Addition implementation
-│   ├── division.c         # Division implementation
-│   ├── list.c             # Linked list operations
-│   ├── main.c             # Entry point
-│   ├── multiplication.c   # Multiplication implementation
-│   ├── result.c           # Result utilities
-│   └── subtraction.c      # Subtraction implementation
-└── tests/
-    ├── printing.c         # Test utilities
-    └── test.sh            # Test script
+│   ├── main.c
+│   ├── list.c
+│   ├── addition.c
+│   ├── subtraction.c
+│   ├── multiplication.c
+│   ├── division.c
+│   └── result.c
+├── tests/
+│   ├── printing.c
+│   └── test.sh
+├── build/          # Generated object files
+├── Makefile
+└── README.md
 ```
+
+---
 
 ## Build & Run
+
 ```bash
-make              # Compile
-make test         # Run tests
-make clean        # Clean build artifacts
+make        # Compile project
+make test   # Run test script
+make clean  # Remove build artifacts
 ```
+
+---
 
 ## Usage
+
 ```bash
-./a.out <first_operand> <operator> <second_operand>
+./apc <first_operand> <operator> <second_operand>
 ```
 
-**Examples:**
+---
+
+## Examples
+
 ```bash
-./a.out 100 + 200                    # 300
-./a.out 500 - 300                    # 200
-./a.out -100 + 50                    # -50
-./a.out 25 x 4                       # 100
-./a.out 100 / -1                     # -100
-./a.out 123456789 x 987654321        # Large numbers
+./apc 100 + 200
+./apc 500 - 300
+./apc -100 + 50
+./apc 25 x 4
+./apc 100 / -1
+./apc 123456789 x 987654321
 ```
+---
 
 ## Author
+
 Arjun Vasavan
 
+---
+
 ## License
-[MIT License](./LICENSE) © 2025 Arjun Vasavan
+
+This project is licensed under the MIT License.
+
+© 2025 Arjun Vasavan
