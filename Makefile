@@ -1,11 +1,24 @@
+CC = gcc
+CFLAGS = -Iinclude
+TARGET = apc
+
+SRC = $(wildcard src/*.c)
+OBJ = $(SRC:src/%.c=build/%.o)
+
 .PHONY: all test clean
 
-all:
-	@gcc -Iinclude src/*.c tests/printing.c -o a.out
+all: $(TARGET)
 
-test:
-	@gcc -Iinclude src/*.c tests/printing.c -o a.out
-	@cd tests && ./test.sh
+$(TARGET): $(OBJ)
+	$(CC) $(OBJ) -o $(TARGET)
+
+build/%.o: src/%.c
+	@mkdir -p build
+	$(CC) $(CFLAGS) -c $< -o $@
+
+test: $(TARGET)
+	cd tests && ./test.sh
 
 clean:
-	@rm -f a.out
+	rm -rf build $(TARGET)
+

@@ -13,8 +13,8 @@ typedef struct Dlist{  // NOTE: in typedef we can put name early also
 }Dlist;
 
 typedef enum {
-    SUCCESS, // 0
-    FAILURE // 1
+    SUCCESS,
+    FAILURE 
 }status;
 
 typedef enum {
