@@ -126,8 +126,8 @@ status check_if_its_integer ( char* str1, char* str2 ) {
 
     while (str1[i]) {
         if ( (str1[i] >= 'a' && str1[i] <= 'z') || (str1[i]>= 'A' && str1[i] <= 'Z') ) {
-            printf("\033[31m✗ Error: Operation failed!\033[0m\n");
-            printf("\033[33m⚠ Warning: Only Integer can be used\033[0m\n");
+            printf("\033[31m ✗ Error: Operation failed!\033[0m\n");
+            printf("\033[33m ⚠ Warning: Only Integer can be used\033[0m\n");
             exit(EXIT_FAILURE);
         }
         i+=1;
@@ -136,8 +136,8 @@ status check_if_its_integer ( char* str1, char* str2 ) {
 
     while (str2[i]) {
         if ( (str2[i] >= 'a' && str2[i] <= 'z') || (str2[i]>= 'A' && str2[i] <= 'Z') ) {
-            printf("\033[31m✗ Error: Operation failed!\033[0m\n");
-            printf("\033[33m⚠ Warning: Only Integer can be used\033[0m\n");
+            printf("\033[31m ✗ Error: Operation failed!\033[0m\n");
+            printf("\033[33m ⚠ Warning: Only Integer can be used\033[0m\n");
             exit(EXIT_FAILURE);
         }
         i+=1;

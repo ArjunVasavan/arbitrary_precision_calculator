@@ -1,12 +1,13 @@
 #include "../include/apc.h"
+#include <string.h>
 
 sign result_sign_flag;
 
 int main(int argc, char** argv) {
 
-    if ( argc != 4 ) {
+    if ( argc != 4 || strlen(argv[2]) != 1 ) {
         printf("\033[31m ✗ Error: Operation failed!\033[0m\n");
-        printf("\033[36m   Usecase : ./a.out <operand_1> <operator> <operand_2> \033[0m\n");
+        printf("\033[36m   Usecase : ./apc <operand_1> <operator> <operand_2> \033[0m\n");
         printf("\033[36m   Note    : for multiplication use 'x' \033[0m\n");
         exit(EXIT_FAILURE);
     }
@@ -65,7 +66,7 @@ int main(int argc, char** argv) {
         }
         default:{
             printf("\033[31m ✗ Error: Operation failed!\033[0m\n");
-            printf("\033[36m   Usecase : ./a.out <operand_1> <operator> <operand_2> \033[0m\n");
+            printf("\033[36m   Usecase : ./apc <operand_1> <operator> <operand_2> \033[0m\n");
             printf("\033[36m   Note    : for multiplication use 'x' \033[0m\n");
             exit(EXIT_FAILURE);
         }

@@ -1,5 +1,4 @@
 #include "../include/apc.h"
-#include <stdio.h>
 
 operation which_operation(char *operand_1,
                           char operation,

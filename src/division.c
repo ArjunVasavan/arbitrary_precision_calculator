@@ -11,6 +11,7 @@ status division(Dlist* head_1, Dlist* tail_1,
     }
 
     compare cmp = compare_bigint(head_1,head_2);
+
     Dlist*temp_HR;
     Dlist* temp_TR;
     Dlist* big_head;

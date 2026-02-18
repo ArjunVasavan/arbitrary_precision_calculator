@@ -32,7 +32,7 @@ typedef enum{
     ADDITION,
     SUBTRACTION,
     REGULAR
-} operation;
+}operation;
 
 status create_list(char* argv, Dlist** head, Dlist** tail);
 void print_list(Dlist* head,Dlist* tail);
@@ -60,4 +60,5 @@ status starting_zero_remove(Dlist** head, Dlist** tail);
 status insert_at_last(int data, Dlist **head, Dlist **tail);
 void output_print(Dlist* head, Dlist* tail);
 status check_if_its_integer ( char* str1, char* str2 );
+
 #endif
